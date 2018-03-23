@@ -1,0 +1,21 @@
+<div class="note note-{{model.color}}"
+    ng-style="{ left:model.left, top:model.top, 'z-index':model.zIndex, width:model.width, height:model.height }"
+    ng-click="_onClicked($event)">
+
+    <div class="note-title" ng-mousedown="_onTitleMouseDown($event)">
+        <editable ng-model="model.title" trigger="dblclick"
+            exit-on="escape"></editable>
+
+        <div class="note-close-button" ng-click="_onCloseButtonClick($event)">
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+    <div class="note-body">
+        <editable ng-model="model.body" trigger="click"
+            exit-on="escape"></editable>
+    </div>
+
+    <div class="note-resize-grip"
+        ng-mousedown="_onResizeGripMouseDown($event)"></div>
+</div>

@@ -1,0 +1,10 @@
+<div class="notes-container">
+    <div ng-repeat="note in notes track by $index">
+        <note ng-model="note"
+            on-title-mouse-down="onNoteTitleMouseDown(pageX, pageY)"
+            on-resize-grip-mouse-down="onNoteResizeGripMouseDown(pageX, pageY)"
+            on-clicked="onNoteClicked(id)"
+            on-closed="onNoteClosed(id)">
+        </note>
+    </div>
+</div>

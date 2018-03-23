@@ -1,0 +1,219 @@
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background-color: midnightblue;
+    width: 98px;
+  }
+
+  .navbar-brand{
+    color: white;
+    line-height: 35px;
+    font-size: 35px;
+    margin-bottom: 52px;
+    }
+
+  .navbar-inverse {
+    width: -16px;
+    background-color: midnightblue;
+    width: 18px;
+  }
+
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: #ededed;
+}
+
+
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+/*** NOTES STYLES ***/
+
+@font-face {
+    font-family: 'xOpenSansLight';
+    src: url('/fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'xOpenSansRegular';
+    src: url('/fonts/OpenSans-Regular.ttf');
+}
+
+.notes-container {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.note {
+    position: absolute;
+    display: block;
+    border: 1px solid black;
+    padding: 0;
+    font-family: 'xOpenSansLight';
+    font-size: 1.3em;
+    box-shadow: 3px 3px 5px 0px rgba(110,110,110,1);
+    border-radius: 3px;
+}
+
+.note-title {
+    padding: 5px;
+    text-align: center;
+    font-family: 'xOpenSansRegular';
+    font-size: 1.4em;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid;
+    cursor: move;
+    padding-left: 36px;
+    min-height: 48px;
+}
+
+.note-body {
+    padding: 4px;
+    padding-top: 2px;
+    overflow: wrap;
+    height: calc(100% - 50px);
+}
+
+[contenteditable="true"] {
+    cursor: text;
+    outline: none;
+}
+
+[contenteditable]:focus {
+    outline: none;
+}
+
+.note-title [contenteditable] {
+    width: 100%;
+    min-height: 40px;
+}
+
+.note-body [contenteditable] {
+    height: 100%;
+}
+
+.note-resize-grip {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    display: block;
+    background-image: url('../images/resize.gif');
+    background-size: 24px;
+    bottom: 0;
+    right: 0;
+    margin: 3px;
+    margin-right: 1px;
+    opacity: 0.1;
+}
+
+.note-resize-grip:hover {
+    opacity: 0.4;
+    cursor: se-resize;
+}
+
+.note.note-yellow, .note.note-yellow .note-title {
+  border-color: yellow yellow;
+  background: linear-gradient(rgb(255, 254, 169), rgb(255, 255, 110));
+}
+
+.note.note-yellow .note-title {
+    background: url('../images/pin_yellow.png');
+    background-size: 42px;
+
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.note.note-green, .note.note-green .note-title {
+  background: linear-gradient(#F0FFCA, #D6FD75);
+  border-color: #87D500 #87D500;
+}
+
+.note.note-green .note-title {
+    background: url('../images/pin_green.png');
+    background-size: 42px;
+
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.note.note-red, .note.note-red .note-title {
+  border-color: #FFA732 #FFA732;
+  background: linear-gradient(#FFECCF,#FFCC7D);
+}
+
+.note.note-red .note-title {
+    background: url('../images/pin_red.png');
+    background-size: 42px;
+
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.note-close-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 9999;
+}
+
+.color-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #9d9d9d;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.color-box-yellow {
+  background-color: rgb(255, 255, 110);
+}
+
+.color-box-green {
+  background-color: #D6FD75;
+}
+
+.color-box-red {
+  background-color: #FFCC7D;
+}
